@@ -14,6 +14,13 @@ class NumInput
       tens = (@number/10) * 10
       ones = @number - tens
       word = nums.fetch(tens) + " " + nums.fetch(ones)
+
+    elsif @number < 1000
+      hundreds = (@number/100)
+      tens = ((@number/10) * 10) - (hundreds * 100)
+      ones = (@number - tens) - (hundreds * 100)
+      word = nums.fetch(hundreds) + " hundred " + nums.fetch(tens) + " " + nums.fetch(ones)
+
     end
     word
   end
