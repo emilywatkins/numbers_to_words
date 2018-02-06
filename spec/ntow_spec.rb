@@ -15,8 +15,8 @@ describe('NumInput') do
     end
 
     it ("returns combined word from input") do
-      number = NumInput.new(21)
-      expect(number.ntow()).to(eq("twenty one"))
+      number = NumInput.new(99)
+      expect(number.ntow()).to(eq("ninety nine"))
     end
   end
 end
