@@ -4,9 +4,14 @@ require('ntow')
 
 describe('NumInput') do
   describe('#ntow') do
-    it("returns written word from numeric input") do
-      number = NumInput.new(1)
-      expect(number.ntow()).to(eq("one"))
+    it("returns written word from numeric input 1-19") do
+      number = NumInput.new(19)
+      expect(number.ntow()).to(eq("nineteen"))
+    end
+
+    it("returns written word from numeric input 20, 30...90") do
+      number = NumInput.new(20)
+      expect(number.ntow()).to(eq("twenty"))
     end
 
   end
